@@ -1,3 +1,82 @@
-@media (min-width: 1200px)
-  .container 
+@media (max-width: 4000px)
+  .container
     max-width: 1192px
+@media (max-width: 1920px)
+  .container
+    max-width: 1192px
+@media (max-width: 720px)
+  .weather
+    &-footer
+      flex-wrap: wrap
+      &-item
+        width: 50%
+        margin-bottom: 35px
+    &-header
+      &-city
+        &-choice
+          &-selected
+            &-wraper
+              // width: 100%
+@media (max-width: 576px)
+  .weather
+    &-header
+      padding-top: 19px
+      &-city
+        &-name
+          font-size: 30px
+          line-height: 36px
+        &-choice
+          display: flex
+          justify-content: space-between
+          margin-top: 15px
+          &-selected
+            padding: 18px
+            &-wraper
+              top: 25px
+              width: 100%
+              
+              input
+                font-size: 15px
+                line-height: 16px
+                width: 70%
+              button
+                font-size: 15px
+                line-height: 18px
+
+          button
+            margin-right: 0
+            font-size: 15px
+            svg
+              margin-right: 6px
+
+      &-switch
+        &-wraper
+          // margin-top: 15px
+    &-demonstration
+      &-info 
+        p
+          font-size: 120px
+          line-height: 120px
+          font-weight: 300
+        &-img
+          max-width: 100px
+          max-height: 100px
+        &-description
+          font-size: 18px
+          line-height: 15.5px
+          margin-top: 20px
+    &-footer 
+      p
+        font-size: 15px
+        line-height: 16px
+      p:nth-child(2)
+        font-size: 18px
+        line-height: 21.6px
+        margin-top: 2px
+    &-demonstration
+      &-wraper
+        padding-top: 70px
+        padding-bottom: 120px
+
+
+

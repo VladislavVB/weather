@@ -10,6 +10,10 @@ let weather;
 const weatherDemonstrationInfoImgImg = document.querySelector('.weather-demonstration-info-img img');
 const searchCity = document.querySelector('#searchCity');
 const weatherHeaderCityChoiceSelectedWraper = document.querySelector('.weather-header-city-choice-selected-wraper');
+const weatherHeaderCityChoiceSelectedWraperInput = document.querySelector('.weather-header-city-choice-selected-wraper input');
+const weatherHeaderCityChoiceSelectedHide = document.querySelectorAll('.weather-header-city-choice-selected-hide');
+const weatherHeaderSwitchWraper = document.querySelector('.weather-header-switch-wraper');
+const weatherHeaderCityChoice = document.querySelector('.weather-header-city-choice');
 
 //
 const weatherHeaderSwitchItem = document.querySelectorAll('.weather-header-switch-item');
@@ -49,7 +53,7 @@ const updateWeatherIcon = (weatherInfo) => {
 };
 
 const updateWindInfo = (windInfo) => {
-  windViewCount.innerHTML = `${windInfo.speed} м/с,`;
+  windViewCount.innerHTML = `${windInfo.speed} м/с,`; //не нашел где брать значения западного, восточного,... ветров
 };
 
 const updatePressureInfo = (pressureInfo) => {
@@ -82,10 +86,20 @@ const swithTemperatureSystem = (systemNum) => {
   }
 };
 
+//выезжающие города в списке
+weatherHeaderCityChoiceSelectedWraperInput.addEventListener('focus', () => {
+  weatherHeaderCityChoiceSelectedHide.forEach(e => {
+    e.classList.add('weather-header-city-choice-selected-hide-active');
+  });
+});
+
+
 //
 
 const searchCitySelected = () => {
   weatherHeaderCityChoiceSelectedWraper.classList.add('weather-header-city-choice-selected-wraper-active');
+  weatherHeaderSwitchWraper.classList.add('opacity-zero'); //исправить при десктопе и мобилке 
+  weatherHeaderCityChoice.classList.add('opacity-zero');
 };
 
 // document.querySelector('body').addEventListener('click', (event) => {

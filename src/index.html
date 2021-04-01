@@ -15,36 +15,54 @@
     <div class="container">
       <div class="weather-wraper">
         <!-- weather-header -->
-        <div class="weather-header">
-          <div class="weather-header-city">
-            <h2 class="weather-header-city-name">Омск</h2>
-            <div class="weather-header-city-choice">
-              <button onclick="searchCitySelected()" id="searchCity">сменить город</button>
-              <button><svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M17.489 0.838191L0.238948 11.6268L8.72799 13.2769L13.2146 20.7637L17.489 0.838191Z" fill="white"
-                    fill-opacity="0.4" />
-                </svg>
-                Мое местоположение
-              </button>
-
-            </div>
+        <div class="weather-header-wraper">
+          <div class="weather-header">
             <div class="weather-header-city-choice-selected-wraper">
               <div class="weather-header-city-choice-selected">
                 <input placeholder="Ваш город" type="text"><button>ОК</button>
               </div>
+              <p class="weather-header-city-choice-selected weather-header-city-choice-selected-hide">
+                Город
+              </p>
+              <p class="weather-header-city-choice-selected weather-header-city-choice-selected-hide">
+                Город
+              </p>
+              <p class="weather-header-city-choice-selected weather-header-city-choice-selected-hide">
+                Город
+              </p>
+              <p class="weather-header-city-choice-selected weather-header-city-choice-selected-hide">
+                Город
+              </p>
+            </div>
+            <div class="weather-header-city">
+              <h2 class="weather-header-city-name">Омск</h2>
+
+
+            </div>
+            <div class="weather-header-switch-wraper">
+              <div class="weather-header-switch-demonstration">
+                º
+              </div>
+              <div class="weather-header-switch">
+                <div onclick="swithTemperatureSystem(0)"
+                  class="weather-header-switch-item weather-header-switch-item-active">C</div>
+                <div onclick="swithTemperatureSystem(1)" class="weather-header-switch-item">F</div>
+              </div>
             </div>
           </div>
-          <div class="weather-header-switch-wraper">
-            <div class="weather-header-switch-demonstration">
-              º
-            </div>
-            <div class="weather-header-switch">
-              <div onclick="swithTemperatureSystem(0)" class="weather-header-switch-item weather-header-switch-item-active">C</div>
-              <div onclick="swithTemperatureSystem(1)" class="weather-header-switch-item">F</div>
-            </div>
+          <div class="weather-header-city-choice">
+            <button onclick="searchCitySelected()" id="searchCity">Сменить город</button>
+            <button><svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M17.489 0.838191L0.238948 11.6268L8.72799 13.2769L13.2146 20.7637L17.489 0.838191Z" fill="white"
+                  fill-opacity="0.4" />
+              </svg>
+              Мое местоположение
+            </button>
+
           </div>
         </div>
+
         <!-- weather-header -->
         <div class="weather-demonstration-wraper">
           <div class="weather-demonstration">
