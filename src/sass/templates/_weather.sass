@@ -7,6 +7,7 @@
     justify-content: space-between
     padding-top: 75px
     &-city
+      position: relative
       &-name
         font-size: 50px
         line-height: 60px
@@ -21,8 +22,44 @@
           margin-right: 29px
           display: flex
           align-items: center
+          &:focus
+            display: none
           svg
             margin-right: 11.5px
+        &-selected
+          display: flex
+          align-items: center
+          justify-content: space-between
+          // height: 100%
+          &-wraper
+            width: 579px
+            // height: 97px
+            border-radius: 5px
+            background-color: $white
+            padding: 30px
+            position: absolute
+            top: 0px
+            left: -700px
+            transition: 0.5s
+            opacity: 0
+            // display: none
+            input
+              border: none
+              background-color: transparent
+              font-size: 30px
+              line-height: 36px
+              color: $black
+            button
+              border: none
+              background-color: transparent
+              color: $blue
+              font-size: 30px
+              line-height: 36px
+            &-active
+              // display: block
+              left: 0
+              transition: 0.5s
+              opacity: 1
     &-switch
       width: 77px
       height: 29px

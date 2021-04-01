@@ -19,13 +19,20 @@
           <div class="weather-header-city">
             <h2 class="weather-header-city-name">Омск</h2>
             <div class="weather-header-city-choice">
-              <button>сменить город</button>
+              <button onclick="searchCitySelected()" id="searchCity">сменить город</button>
               <button><svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M17.489 0.838191L0.238948 11.6268L8.72799 13.2769L13.2146 20.7637L17.489 0.838191Z" fill="white"
                     fill-opacity="0.4" />
                 </svg>
-                Мое местоположение</button>
+                Мое местоположение
+              </button>
+
+            </div>
+            <div class="weather-header-city-choice-selected-wraper">
+              <div class="weather-header-city-choice-selected">
+                <input placeholder="Ваш город" type="text"><button>ОК</button>
+              </div>
             </div>
           </div>
           <div class="weather-header-switch-wraper">
@@ -33,8 +40,8 @@
               º
             </div>
             <div class="weather-header-switch">
-              <div class="weather-header-switch-item weather-header-switch-item-active">C</div>
-              <div class="weather-header-switch-item">F</div>
+              <div onclick="swithTemperatureSystem(0)" class="weather-header-switch-item weather-header-switch-item-active">C</div>
+              <div onclick="swithTemperatureSystem(1)" class="weather-header-switch-item">F</div>
             </div>
           </div>
         </div>
@@ -43,9 +50,9 @@
           <div class="weather-demonstration">
             <div class="weather-demonstration-info">
               <div class="weather-demonstration-info-img">
-                <img src="img/weather/sun.png" alt="">
+                <img src="" alt="">
               </div>
-              <p>19</p>
+              <p></p>
             </div>
             <div class="weather-demonstration-info-description">
               Преимущественно солнечно
@@ -56,25 +63,29 @@
         <div class="weather-footer">
           <div class="weather-footer-item">
             <p>Ветер</p>
-            <p>5 м/с, западный</p>
+            <p id="wind"></p>
           </div>
           <div class="weather-footer-item">
             <p>Давление</p>
-            <p>752 мм рт. ст.</p>
+            <p id="pressure"></p>
           </div>
           <div class="weather-footer-item">
             <p>Влажность</p>
-            <p>60%</p>
+            <p id="humidity"></p>
           </div>
           <div class="weather-footer-item">
             <p>Вероятность дождя</p>
-            <p>10%</p>
+            <p id="probabilityPrecipitation">10%</p>
           </div>
         </div>
         <!-- weather-footer -->
       </div>
     </div>
   </section>
+  <script src="scripts/services/helper.service.js"></script>
+  <script src="scripts/config.js"></script>
+  <script src="scripts/services/api.service.js"></script>
+  <script src="scripts/index.js"></script>
 </body>
 
 </html>
