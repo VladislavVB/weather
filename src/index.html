@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>weather</title>
+</head>
+
+<body>
+  <section class="weather">
+    <div class="container">
+      <div class="weather-wraper">
+        <!-- weather-header -->
+        <div class="weather-header">
+          <div class="weather-header-city">
+            <h2 class="weather-header-city-name">Омск</h2>
+            <div class="weather-header-city-choice">
+              <button>сменить город</button>
+              <button><svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M17.489 0.838191L0.238948 11.6268L8.72799 13.2769L13.2146 20.7637L17.489 0.838191Z" fill="white"
+                    fill-opacity="0.4" />
+                </svg>
+                Мое местоположение</button>
+            </div>
+          </div>
+          <div class="weather-header-switch-wraper">
+            <div class="weather-header-switch-demonstration">
+              º
+            </div>
+            <div class="weather-header-switch">
+              <div class="weather-header-switch-item weather-header-switch-item-active">C</div>
+              <div class="weather-header-switch-item">F</div>
+            </div>
+          </div>
+        </div>
+        <!-- weather-header -->
+        <div class="weather-demonstration-wraper">
+          <div class="weather-demonstration">
+            <div class="weather-demonstration-info">
+              <div class="weather-demonstration-info-img">
+                <img src="img/weather/sun.png" alt="">
+              </div>
+              <p>19</p>
+            </div>
+            <div class="weather-demonstration-info-description">
+              Преимущественно солнечно
+            </div>
+          </div>
+        </div>
+        <!-- weather-footer -->
+        <div class="weather-footer">
+          <div class="weather-footer-item">
+            <p>Ветер</p>
+            <p>5 м/с, западный</p>
+          </div>
+          <div class="weather-footer-item">
+            <p>Давление</p>
+            <p>752 мм рт. ст.</p>
+          </div>
+          <div class="weather-footer-item">
+            <p>Влажность</p>
+            <p>60%</p>
+          </div>
+          <div class="weather-footer-item">
+            <p>Вероятность дождя</p>
+            <p>10%</p>
+          </div>
+        </div>
+        <!-- weather-footer -->
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

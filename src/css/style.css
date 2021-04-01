@@ -1,0 +1,204 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #fff;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+.weather {
+  background-color: #498cec;
+  min-height: 100vh;
+}
+
+.weather-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 75px;
+}
+
+.weather-header-city-name {
+  font-size: 50px;
+  line-height: 60px;
+  margin: 0;
+}
+
+.weather-header-city-choice {
+  margin-top: 9px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.weather-header-city-choice button {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+  border: none;
+  margin-right: 29px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.weather-header-city-choice button svg {
+  margin-right: 11.5px;
+}
+
+.weather-header-switch {
+  width: 77px;
+  height: 29px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.weather-header-switch-wraper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.weather-header-switch-demonstration {
+  margin-right: 10px;
+  margin-top: 5px;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.weather-header-switch-item {
+  width: 50px;
+  color: rgba(255, 255, 255, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+  line-height: 21.6px;
+  cursor: pointer;
+}
+
+.weather-header-switch-item-active {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.weather-demonstration-wraper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 218px;
+  padding-top: 186px;
+}
+
+.weather-demonstration-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.weather-demonstration-info p {
+  font-size: 180px;
+  margin: 0;
+  position: relative;
+}
+
+.weather-demonstration-info p::after {
+  position: absolute;
+  content: 'º';
+}
+
+.weather-demonstration-info-img {
+  max-width: 200px;
+  max-height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 10px;
+}
+
+.weather-demonstration-info-img img {
+  width: 100%;
+}
+
+.weather-demonstration-info-description {
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.weather-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.weather-footer p {
+  font-weight: 400;
+  line-height: 21.6px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+.weather-footer p:nth-child(2) {
+  color: #fff;
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1192px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,100 @@
+.weather
+  background-color: $blue
+  min-height: 100vh
+  &-wraper
+  &-header
+    display: flex
+    justify-content: space-between
+    padding-top: 75px
+    &-city
+      &-name
+        font-size: 50px
+        line-height: 60px
+        margin: 0
+      &-choice
+        margin-top: 9px
+        display: flex
+        button
+          color: rgba($white , 0.6 )
+          background-color: transparent
+          border: none
+          margin-right: 29px
+          display: flex
+          align-items: center
+          svg
+            margin-right: 11.5px
+    &-switch
+      width: 77px
+      height: 29px
+      border-radius: 8px
+      border: 1px solid rgba($white , 0.4 )
+      display: flex
+      overflow: hidden
+      &-wraper
+        display: flex
+      &-demonstration
+        margin-right: 10px
+        margin-top: 5px
+        font-family: 'PT Sans', sans-serif
+        font-weight: 400
+        font-size: 18px
+        color: rgba($white , 0.4 )
+      &-item
+        width: 50px
+        color: rgba($white , 0.4 )
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 18px
+        line-height: 21.6px
+        cursor: pointer
+        &-active
+          color: $white
+          background-color: rgba($white , 0.2 )
+  &-demonstration
+    &-wraper
+      display: flex
+      justify-content: center
+      align-items: center
+      padding-bottom: 218px
+      padding-top: 186px
+    &-info
+      display: flex
+      align-items: center
+      p
+        font-size: 180px
+        // line-height: 216px
+        margin: 0
+        position: relative
+        &::after
+          position: absolute
+          content: 'º'
+      &-img
+        max-width: 200px
+        max-height: 200px
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-right: 10px
+        img
+          width: 100%
+      &-description
+        font-size: 25px
+        line-height: 30px
+        text-align: center
+        margin-top: 10px
+  &-footer
+    display: flex
+    justify-content: space-between
+    p
+      font-weight: 400
+      line-height: 21.6px
+      font-size: 18px
+      color: rgba($white , 0.6 )
+      margin: 0
+    p:nth-child(2)
+      color: $white
+      margin-top: 10px
+      font-weight: 400
+      font-size: 25px
+      line-height: 30px
