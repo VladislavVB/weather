@@ -14,14 +14,14 @@ const weatherHeaderCityChoiceSelectedWraperInput = document.querySelector('.weat
 const weatherHeaderCityChoiceSelectedHide = document.querySelectorAll('.weather-header-city-choice-selected-hide');
 const weatherHeaderSwitchWraper = document.querySelector('.weather-header-switch-wraper');
 const weatherHeaderCityChoice = document.querySelector('.weather-header-city-choice');
-
+const weatherBackGround = document.querySelector('.weather');
 //
 const weatherHeaderSwitchItem = document.querySelectorAll('.weather-header-switch-item');
 
 
 
 
-apiService.getCurrentWeather('Краснодар').then(async res => {
+apiService.getCurrentWeather('кРАСНОДАР').then(async res => {
   weather = await res.json();
   const temperature = weather.main.temp;
   weatherDemonstrationInfoDescription.innerHTML = `${weather.weather[0].description}`;
@@ -35,7 +35,8 @@ apiService.getCurrentWeather('Краснодар').then(async res => {
 const updateWeatherIcon = (weatherInfo) => {
   switch (weatherInfo.toUpperCase()) {
     case 'RAIN':
-      weatherDemonstrationInfoImgImg.src = '../src/img/weather/rain.png'
+      weatherDemonstrationInfoImgImg.src = '../src/img/weather/rain.png';
+      weatherBackGround.classList.add('weather-rain');
       break;
     case 'CLEAR':
       weatherDemonstrationInfoImgImg.src = '../src/img/weather/sun.png'
@@ -53,7 +54,7 @@ const updateWeatherIcon = (weatherInfo) => {
 };
 
 const updateWindInfo = (windInfo) => {
-  windViewCount.innerHTML = `${windInfo.speed} м/с,`; //не нашел где брать значения западного, восточного,... ветров
+  windViewCount.innerHTML = `${windInfo.speed} м/с`; //не нашел где брать значения западного, восточного,... ветров
 };
 
 const updatePressureInfo = (pressureInfo) => {

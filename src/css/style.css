@@ -21,6 +21,10 @@ button {
   opacity: 0;
 }
 
+.weather-rain {
+  background-color: #7290b9 !important;
+}
+
 .weather {
   background-color: #498cec;
   min-height: 100vh;
