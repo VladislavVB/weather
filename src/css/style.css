@@ -7,8 +7,8 @@
 }
 
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 21px;
+  padding-left: 21px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -92,6 +92,7 @@ button {
 .weather-header-city-choice-selected-hide {
   display: none;
   margin: 0;
+  font-size: 30px;
 }
 
 .weather-header-city-choice-selected-hide-active {
@@ -100,6 +101,7 @@ button {
 
 .weather-header-city-choice-selected-wraper {
   width: 579px;
+  z-index: 10;
   border-radius: 5px;
   background-color: #fff;
   -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
@@ -316,6 +318,9 @@ button {
   .weather-header-city-choice-selected {
     padding: 18px;
   }
+  .weather-header-city-choice-selected-hide {
+    font-size: 15px;
+  }
   .weather-header-city-choice-selected-wraper {
     top: 25px;
     width: 100%;
@@ -336,9 +341,12 @@ button {
   .weather-header-city-choice button svg {
     margin-right: 6px;
   }
+  .weather-header-switch-wraper {
+    margin-top: 7px;
+  }
   .weather-demonstration-info p {
-    font-size: 120px;
-    line-height: 120px;
+    font-size: 90px;
+    line-height: 110px;
     font-weight: 300;
   }
   .weather-demonstration-info-img {
@@ -360,8 +368,8 @@ button {
     margin-top: 2px;
   }
   .weather-demonstration-wraper {
-    padding-top: 70px;
-    padding-bottom: 120px;
+    padding-top: 105px;
+    padding-bottom: 165px;
   }
 }
 /*# sourceMappingURL=style.css.map */

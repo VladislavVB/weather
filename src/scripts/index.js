@@ -15,13 +15,14 @@ const weatherHeaderCityChoiceSelectedHide = document.querySelectorAll('.weather-
 const weatherHeaderSwitchWraper = document.querySelector('.weather-header-switch-wraper');
 const weatherHeaderCityChoice = document.querySelector('.weather-header-city-choice');
 const weatherBackGround = document.querySelector('.weather');
-//
+const weatherHeaderCityChoiceSelectedWraperButton = document.querySelector('.weather-header-city-choice-selected-wraper button');
+const weatherHeaderCityName = document.querySelector('.weather-header-city-name');
 const weatherHeaderSwitchItem = document.querySelectorAll('.weather-header-switch-item');
 
 
 
 
-apiService.getCurrentWeather('кРАСНОДАР').then(async res => {
+apiService.getCurrentWeather('ижевск').then(async res => {
   weather = await res.json();
   const temperature = weather.main.temp;
   weatherDemonstrationInfoDescription.innerHTML = `${weather.weather[0].description}`;
@@ -88,20 +89,80 @@ const swithTemperatureSystem = (systemNum) => {
 };
 
 //выезжающие города в списке
-weatherHeaderCityChoiceSelectedWraperInput.addEventListener('focus', () => {
+weatherHeaderCityChoiceSelectedWraperInput.addEventListener('mousedown', () => {
   weatherHeaderCityChoiceSelectedHide.forEach(e => {
     e.classList.add('weather-header-city-choice-selected-hide-active');
   });
 });
 
+weatherHeaderCityChoiceSelectedWraperInput.addEventListener('mouseup', () => {
+  weatherHeaderCityChoiceSelectedHide.forEach(e => {
+    e.classList.remove('weather-header-city-choice-selected-hide-active');
+  });
+});
 
 //
 
 const searchCitySelected = () => {
   weatherHeaderCityChoiceSelectedWraper.classList.add('weather-header-city-choice-selected-wraper-active');
-  weatherHeaderSwitchWraper.classList.add('opacity-zero'); //исправить при десктопе и мобилке 
+  weatherHeaderSwitchWraper.classList.add('opacity-zero');
   weatherHeaderCityChoice.classList.add('opacity-zero');
 };
+
+const closeSearhCity = () => {
+  weatherHeaderCityChoiceSelectedWraper.classList.remove('weather-header-city-choice-selected-wraper-active');
+  weatherHeaderSwitchWraper.classList.remove('opacity-zero');
+  weatherHeaderCityChoice.classList.remove('opacity-zero');
+};
+
+weatherHeaderCityChoiceSelectedWraper.addEventListener('click', (e) => {
+  if (e.target === weatherHeaderCityChoiceSelectedWraper) {
+    closeSearhCity();
+  }
+});
+
+weatherHeaderCityChoiceSelectedWraperButton.addEventListener('click', () => {
+  closeSearhCity();
+});
+
+//динамическое название города 
+const inputValueCityNameFunction = () => {
+  let inputValueCityName = weatherHeaderCityChoiceSelectedWraperInput.value;
+  weatherHeaderCityName.innerHTML = inputValueCityName;
+};
+// inputValueCityNameFunction();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // document.querySelector('body').addEventListener('click', (event) => {
 //   if(event.target !== weatherHeaderCityChoiceSelectedWraper && weatherHeaderCityChoiceSelectedWraper.classList.value.indexOf('weather-header-city-choice-selected-wraper-active') !== -1){
