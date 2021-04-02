@@ -1,8 +1,12 @@
 class HelperService {
+  constructor() { }
+
   converKelvineToCelsius(t) {
-    return t - 273.15
+    return t - 273.15;
   };
+
   convertKelvineToFahrenheit(t) {
-    return 9 * (t - 273.15) / 5 + 32
-  }
+    return 9 * (t - 273.15) / 5 + 32;
+  };
+
 };
