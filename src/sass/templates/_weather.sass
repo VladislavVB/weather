@@ -35,7 +35,6 @@
           padding: 30px
           color: $black
           &-hide
-            // display: none
             margin: 0
             font-size: 30px
             &-active
@@ -43,6 +42,13 @@
             &-wraper
               overflow-y: auto
               max-height: 200px
+              &::-webkit-scrollbar
+                width: 15px
+              &::-webkit-scrollbar-thumb
+                background-color: $blue
+                border-radius: 10px
+                width: 10px
+                border: 4px solid #ffffff
           &-wraper
             width: 579px
             z-index: 10
@@ -54,7 +60,6 @@
             left: -700px
             transition: 0.3s
             opacity: 0
-            // display: none
             input
               border: none
               background-color: transparent
@@ -115,7 +120,6 @@
       align-items: center
       p
         font-size: 180px
-        // line-height: 216px
         margin: 0
         position: relative
         &::after
