@@ -25,6 +25,10 @@ button {
   background-color: #7290b9 !important;
 }
 
+.weather-clear {
+  background-color: #498cec !important;
+}
+
 .weather {
   background-color: #498cec;
   min-height: 100vh;
@@ -90,13 +94,17 @@ button {
 }
 
 .weather-header-city-choice-selected-hide {
-  display: none;
   margin: 0;
   font-size: 30px;
 }
 
 .weather-header-city-choice-selected-hide-active {
   display: block;
+}
+
+.weather-header-city-choice-selected-hide-wraper {
+  overflow-y: auto;
+  max-height: 200px;
 }
 
 .weather-header-city-choice-selected-wraper {

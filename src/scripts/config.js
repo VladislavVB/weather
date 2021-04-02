@@ -2,7 +2,7 @@ const apiConfig = {
   key: 'c22653e187556d1189e5da8412d50805',
 };
 
-const citys = [
+const citysList = [
   'Краснодар',
   'Омск',
   'Москва',
